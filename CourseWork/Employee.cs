@@ -4,7 +4,7 @@ namespace CourseWork;
 
 public class Employee
 {
-    public Employee(Fullname name, int phoneNumber, string email, string position, string login, string password)
+    public Employee(Fullname name, string phoneNumber, string email, string position, string login, string password)
     {
         _name = name;
         _phoneNumber = phoneNumber;
@@ -14,7 +14,7 @@ public class Employee
         _password = password;
     }
 
-    public Employee(string firstName,string middleName, string lastName, int phoneNumber, string email, string position, string login, string password)
+    public Employee(string firstName,string middleName, string lastName, string phoneNumber, string email, string position, string login, string password)
     {
         _name = new Fullname(firstName,middleName,lastName);
         _phoneNumber = phoneNumber;
@@ -24,10 +24,10 @@ public class Employee
         _password = password;
     }
 
-    public int PhoneNumber
+    public string PhoneNumber
     {
         get => _phoneNumber;
-        set => _phoneNumber = value;
+        set => _phoneNumber = value ?? throw new ArgumentNullException(nameof(value));
     }
 
     public string Email
@@ -53,7 +53,7 @@ public class Employee
     public string Login => _login;
 
     private readonly Fullname _name;
-    private int _phoneNumber;
+    private string _phoneNumber;
     private string _email;
     private string _position;
     private readonly string _login;
