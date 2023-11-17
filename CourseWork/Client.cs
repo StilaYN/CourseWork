@@ -20,8 +20,7 @@ public class Client
 
     private bool IsEqual(Client right)
     {
-        if(_name==right._name&&_phoneNumber==right._phoneNumber&&_email==right._email&&_passportData==right._passportData) return true;
-        return false;
+        return _name==right._name&&_phoneNumber==right._phoneNumber&&_email==right._email&&_passportData==right._passportData;
     }
 
     public static bool operator ==(Client left, Client right)
