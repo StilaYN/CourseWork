@@ -1,4 +1,6 @@
-﻿namespace CourseWork;
+﻿using System;
+
+namespace CourseWork;
 
 public class Fullname
 {
@@ -39,7 +41,7 @@ public class Fullname
     {
         if (string.IsNullOrEmpty(_firstName) || string.IsNullOrEmpty(_lastName))
         {
-            return base.ToString();
+            return base.ToString() ?? throw new InvalidOperationException();
         }
         return _firstName + " " + _lastName + " " + _middleName;
     }
