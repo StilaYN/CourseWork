@@ -13,6 +13,22 @@ public class Fullname
         _lastName = lastName;
     }
 
+    private bool IsEqual(Fullname right)
+    {
+        if (_firstName == right._firstName && _middleName == right._middleName &&
+            _lastName == right._lastName) return true;
+        return false;
+    }
+
+    public static bool operator ==(Fullname left, Fullname right)
+    {
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(Fullname left, Fullname right)
+    {
+        return !left.Equals(right);
+    }
     public string FirstName => _firstName;
 
     public string MiddleName => _middleName;
