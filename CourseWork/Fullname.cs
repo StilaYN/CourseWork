@@ -22,12 +22,12 @@ public class Fullname
 
     public static bool operator ==(Fullname left, Fullname right)
     {
-        return left.Equals(right);
+        return left.IsEqual(right);
     }
 
     public static bool operator !=(Fullname left, Fullname right)
     {
-        return !left.Equals(right);
+        return !left.IsEqual(right);
     }
     public string FirstName => _firstName;
 

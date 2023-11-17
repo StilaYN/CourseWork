@@ -18,7 +18,7 @@ public class Client
         _passportData = passportData;
     }
 
-    private bool IsEquel(Client right)
+    private bool IsEqual(Client right)
     {
         if(_name==right._name&&_phoneNumber==right._phoneNumber&&_email==right._email&&_passportData==right._passportData) return true;
         return false;
@@ -26,12 +26,12 @@ public class Client
 
     public static bool operator ==(Client left, Client right)
     {
-        return left.IsEquel(right);
+        return left.IsEqual(right);
     }
 
     public static bool operator !=(Client left, Client right)
     {
-        return !left.IsEquel(right);
+        return !left.IsEqual(right);
     }
 
     public Fullname Name => _name;

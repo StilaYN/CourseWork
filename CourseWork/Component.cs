@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace CourseWork;
 
@@ -21,6 +22,21 @@ public class Component
 
     public string Article => _article;
 
+    private bool IsEqual(Component right)
+    {
+        if(_technicType==right._technicType&&_componentType==right._componentType&&_name==right._name&&
+           _article==right._article&&_price==right._price) return true;
+        else return false;
+    }
+
+    public static bool operator ==(Component left, Component right)
+    {
+        return left.IsEqual(right);
+    }
+    public static bool operator !=(Component left, Component right)
+    {
+        return !left.IsEqual(right);
+    }
     public int Price
     {
         get => _price;
@@ -32,9 +48,9 @@ public class Component
         }
     }
 
-    private string _technicType;
-    private string _componentType;
-    private string _name;
-    private string _article;
+    private readonly string _technicType;
+    private readonly string _componentType;
+    private readonly string _name;
+    private readonly string _article;
     private int _price;
 }
