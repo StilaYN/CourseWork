@@ -22,20 +22,19 @@ public class Component
 
     public string Article => _article;
 
-    private bool IsEqual(Component right)
+    private bool IsEqual(Component? right)
     {
-        if(_technicType==right._technicType&&_componentType==right._componentType&&_name==right._name&&
-           _article==right._article&&_price==right._price) return true;
-        else return false;
+        return right != null && _technicType==right._technicType && _componentType==right._componentType && _name==right._name &&
+               _article==right._article && _price==right._price;
     }
 
-    public static bool operator ==(Component left, Component right)
+    public static bool operator ==(Component? left, Component? right)
     {
-        return left.IsEqual(right);
+        return left != null && left.IsEqual(right);
     }
-    public static bool operator !=(Component left, Component right)
+    public static bool operator !=(Component? left, Component? right)
     {
-        return !left.IsEqual(right);
+        return left != null && !left.IsEqual(right);
     }
     public int Price
     {
