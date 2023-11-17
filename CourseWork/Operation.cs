@@ -4,12 +4,16 @@ namespace CourseWork;
 
 public class Operation
 {
-    public Operation(string name, Component? usedComponent, int price)
+    public Operation(string name, Component? usedComponent, int price, int applicationId)
     {
         _name = name;
         _usedComponent = usedComponent;
         _price = price;
+        _applicationId = applicationId;
     }
+
+    public int ApplicationId => _applicationId;
+
     public Operation(string name, int price)
     {
         _name = name;
@@ -45,4 +49,5 @@ public class Operation
     private string _name;
     private Component? _usedComponent;
     private int _price;
+    private readonly int _applicationId;
 }
