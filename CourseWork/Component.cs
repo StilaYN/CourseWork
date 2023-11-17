@@ -1,4 +1,6 @@
-﻿namespace CourseWork;
+﻿using System;
+
+namespace CourseWork;
 
 public class Component
 {
@@ -19,7 +21,16 @@ public class Component
 
     public string Article => _article;
 
-    public int Price => _price;
+    public int Price
+    {
+        get => _price;
+
+        set
+        {
+            if (value > 0) _price = value;
+            else throw new ArgumentException("NOT Correct price");
+        }
+    }
 
     private string _technicType;
     private string _componentType;
