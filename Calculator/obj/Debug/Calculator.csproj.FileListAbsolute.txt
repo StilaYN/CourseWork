@@ -1,0 +1,8 @@
+C:\Programming\C#\Семестр3\Calculator\bin\Debug\Calculator.exe.config
+C:\Programming\C#\Семестр3\Calculator\bin\Debug\Calculator.exe
+C:\Programming\C#\Семестр3\Calculator\bin\Debug\Calculator.pdb
+C:\Programming\C#\Семестр3\Calculator\obj\Debug\Calculator.csproj.AssemblyReference.cache
+C:\Programming\C#\Семестр3\Calculator\obj\Debug\Calculator.csproj.SuggestedBindingRedirects.cache
+C:\Programming\C#\Семестр3\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Programming\C#\Семестр3\Calculator\obj\Debug\Calculator.exe
+C:\Programming\C#\Семестр3\Calculator\obj\Debug\Calculator.pdb

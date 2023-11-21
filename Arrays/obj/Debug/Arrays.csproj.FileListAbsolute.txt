@@ -1,0 +1,8 @@
+C:\Programming\C#\Семестр3\Arrays\bin\Debug\Arrays.exe.config
+C:\Programming\C#\Семестр3\Arrays\bin\Debug\Arrays.exe
+C:\Programming\C#\Семестр3\Arrays\bin\Debug\Arrays.pdb
+C:\Programming\C#\Семестр3\Arrays\obj\Debug\Arrays.csproj.AssemblyReference.cache
+C:\Programming\C#\Семестр3\Arrays\obj\Debug\Arrays.csproj.SuggestedBindingRedirects.cache
+C:\Programming\C#\Семестр3\Arrays\obj\Debug\Arrays.csproj.CoreCompileInputs.cache
+C:\Programming\C#\Семестр3\Arrays\obj\Debug\Arrays.exe
+C:\Programming\C#\Семестр3\Arrays\obj\Debug\Arrays.pdb
