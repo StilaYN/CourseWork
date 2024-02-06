@@ -1,0 +1,36 @@
+﻿<Window x:Class="CourseWork.ShowApplicationInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork"
+        xmlns:modelview="clr-namespace:CourseWork.ViewModel"
+        d:DataContext="{d:DesignInstance Type=modelview:ShowApplicationInfoVM}"
+        mc:Ignorable="d"
+        Title="Application" Height="450" Width="580">
+    <Grid>
+        <ListView ItemsSource="{Binding Operation}" SelectedItem="{Binding SelectedOperation}" Margin="10,96,127,10" FontSize="14">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="Auto" Header="Name" DisplayMemberBinding ="{Binding Name}"/>
+                    <GridViewColumn Width="Auto" Header="Date" DisplayMemberBinding ="{Binding Date.GetStringDate}"/>
+                    <GridViewColumn Width="Auto" Header="Component" DisplayMemberBinding ="{Binding UsedComponent.Name}"/>
+                    <GridViewColumn Width="Auto" Header="Price" DisplayMemberBinding ="{Binding TotalPrice}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Delete" Command="{Binding RemoveOperation}" HorizontalAlignment="Left" Margin="448,145,0,0" VerticalAlignment="Top" Height="34" Width="100" FontFamily="Bahnschrift" FontSize="14"/>
+        <Button Content="Add" Command="{Binding AddOperation}" HorizontalAlignment="Left" Margin="448,96,0,0" VerticalAlignment="Top" Height="34" Width="100" FontFamily="Bahnschrift" FontSize="14"/>
+        <Button Content="Close" Command="{Binding Close}" HorizontalAlignment="Left" Margin="449,367,0,0" VerticalAlignment="Top" Height="34" Width="100" FontFamily="Bahnschrift" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="{Binding Technic}" TextAlignment="Center" VerticalAlignment="Top" Height="29" Width="536" FontFamily="Bahnschrift" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,44,0,0" TextWrapping="Wrap" Text="{Binding Problem}" TextAlignment="Center" VerticalAlignment="Top" Height="29" Width="536" FontFamily="Bahnschrift" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="452,0,0,0" TextWrapping="Wrap" Text="Status" TextAlignment="Center" VerticalAlignment="Center" Height="24" Width="94" FontFamily="Bahnschrift" FontSize="14"/>
+        <RadioButton GroupName="Status" IsChecked="{Binding IsAccepted}"  Content="Accepted" HorizontalAlignment="Left" Margin="452,229,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="14"/>
+        <RadioButton GroupName="Status" IsChecked="{Binding IsAtWork}"  Content="At Work" HorizontalAlignment="Left" Margin="452,249,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="14"/>
+        <RadioButton GroupName="Status" IsChecked="{Binding IsCompleted}"  Content="Completed" HorizontalAlignment="Left" Margin="452,269,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="14"/>
+        <RadioButton GroupName="Status" IsChecked="{Binding IsCollected}" Content="Collected" HorizontalAlignment="Left" Margin="452,289,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="14"/>
+        <RadioButton GroupName="Status" IsChecked="{Binding IsRejection}" Content="Rejection" HorizontalAlignment="Left" Margin="452,309,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="14"/>
+
+
+    </Grid>
+</Window>

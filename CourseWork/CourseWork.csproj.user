@@ -7,7 +7,117 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Compile Update="AddApplication.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddComponentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddNumberOfComponentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddOperationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddUserWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ChangeAccessWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ChoseWorkProfileWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EnterLoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ManagerWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MasterWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SelectComponentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ShowApplicationInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ShowApplicationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ShowClientWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ShowEmployeeWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ShowOpeationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="StorageWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SysAdminWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AddApplication.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddComponentWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddNumberOfComponentWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddOperationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddUserWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChangeAccessWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChoseWorkProfileWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EnterLoginWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EnterWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ManagerWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MasterWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SelectComponentWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ShowApplicationInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ShowApplicationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ShowClientWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ShowEmployeeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ShowOpeationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="StorageWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SysAdminWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

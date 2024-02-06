@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Programming\C#\Семестр3\CourseWork\App.xaml
-11407045341
+19-1257377259
 
-8-1717373237
-198-200740077
-MainWindow.xaml;
+116-1700591909
+199635130795
+AddApplication.xaml;AddComponentWindow.xaml;AddNumberOfComponentWindow.xaml;AddOperationWindow.xaml;AddUserWindow.xaml;ChangeAccessWindow.xaml;ChoseWorkProfileWindow.xaml;EnterLoginWindow.xaml;EnterWindow.xaml;ManagerWindow.xaml;MasterWindow.xaml;SelectComponentWindow.xaml;ShowApplicationInfo.xaml;ShowApplicationWindow.xaml;ShowClientWindow.xaml;ShowEmployeeWindow.xaml;ShowOpeationWindow.xaml;StorageWindow.xaml;SysAdminWindow.xaml;
 
 True
 

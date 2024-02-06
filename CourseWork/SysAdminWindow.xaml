@@ -1,0 +1,39 @@
+﻿<Window x:Class="CourseWork.SysAdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork"
+        xmlns:modelview="clr-namespace:CourseWork.ViewModel"
+        d:DataContext="{d:DesignInstance Type=modelview:SysAdmin}"
+        mc:Ignorable="d"
+        Title="SysAdminWindow" Height="470" Width="810">
+    <Grid>
+        <ListView ItemsSource="{Binding Employees}" SelectedItem="{Binding SelectedEmployee}" Margin="10,10,10,117" FontSize="14">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="Auto" Header="Surname" DisplayMemberBinding ="{Binding Name.LastName}"/>
+                    <GridViewColumn Width="Auto" Header="Name" DisplayMemberBinding ="{Binding Name.FirstName}"/>
+                    <GridViewColumn Width="Auto" Header="Middle name" DisplayMemberBinding ="{Binding Name.MiddleName}"/>
+                    <GridViewColumn Width="Auto" Header="Position" DisplayMemberBinding ="{Binding Position}"/>
+                    <GridViewColumn Width="Auto" Header="Phone number" DisplayMemberBinding ="{Binding PhoneNumber}"/>
+                    <GridViewColumn Width="Auto" Header="Email" DisplayMemberBinding ="{Binding Email}"/>
+                    <GridViewColumn Width="Auto" Header="Login" DisplayMemberBinding ="{Binding Login}"/>
+                    <GridViewColumn Width="Auto" Header="Access" DisplayMemberBinding ="{Binding AccessToString}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button Content="Delete User" Command="{Binding DeleteUser}" HorizontalAlignment="Left" Margin="177,385,0,0" VerticalAlignment="Top" Height="34" Width="120" FontSize="14" FontFamily="Bahnschrift"/>
+        <Button Content="Add User" Command="{Binding AddUser}" HorizontalAlignment="Left" Margin="10,385,0,0" VerticalAlignment="Top" Height="34" Width="120" FontSize="14" FontFamily="Bahnschrift"/>
+        <Button Content="Change Login" Command="{Binding ChangeLogin}" HorizontalAlignment="Center" Margin="0,385,0,0" VerticalAlignment="Top" Height="34" Width="120" FontFamily="Bahnschrift" FontSize="14"/>
+        <Button Content="Change Password" Command="{Binding ChangePassword}" HorizontalAlignment="Left" Margin="504,385,0,0" VerticalAlignment="Top" Height="34" Width="120" FontFamily="Bahnschrift" FontSize="14"/>
+        <Button Content="Change Access" Command="{Binding ChangeAccess}" HorizontalAlignment="Left" Margin="668,385,0,0" VerticalAlignment="Top" Height="34" Width="120" FontFamily="Bahnschrift" FontSize="14"/>
+        <TextBox HorizontalAlignment="Left" Margin="62,333,0,0" TextWrapping="Wrap" Text="{Binding Search}" VerticalAlignment="Top" Width="625"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,334,0,0" TextWrapping="Wrap" Text="Search:" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="14" RenderTransformOrigin="0.055,0.431"/>
+        <Button Content="Find" Command="{Binding Find}" HorizontalAlignment="Left" Margin="695,333,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="14" Width="40"/>
+        <Button Content="Clear" Command="{Binding Clear}" HorizontalAlignment="Left" Margin="743,333,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="14" Width="40"/>
+        <TextBlock HorizontalAlignment="Center" TextAlignment="Center" Margin="0,359,0,0" TextWrapping="Wrap" Text="{Binding ErrorText}" Visibility="{Binding Visible}" VerticalAlignment="Top" Width="790" Foreground="#FFC80000" FontFamily="Bahnschrift" FontSize="14"/>
+
+    </Grid>
+</Window>

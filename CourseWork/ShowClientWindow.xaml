@@ -1,0 +1,31 @@
+﻿<Window x:Class="CourseWork.ShowClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork"
+        xmlns:modelview="clr-namespace:CourseWork.ViewModel"
+        d:DataContext="{d:DesignInstance Type=modelview:ShowClientVM}"
+        mc:Ignorable="d"
+        Title="SysAdminWindow" Height="470" Width="810">
+    <Grid>
+        <ListView ItemsSource="{Binding Client}" Margin="10,0,10,126" FontSize="14">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="Auto" Header="Surname" DisplayMemberBinding ="{Binding Name.LastName}"/>
+                    <GridViewColumn Width="Auto" Header="Name" DisplayMemberBinding ="{Binding Name.FirstName}"/>
+                    <GridViewColumn Width="Auto" Header="Middle name" DisplayMemberBinding ="{Binding Name.MiddleName}"/>
+                    <GridViewColumn Width="Auto" Header="Passport Data" DisplayMemberBinding ="{Binding PassportData}"/>
+                    <GridViewColumn Width="Auto" Header="Phone number" DisplayMemberBinding ="{Binding PhoneNumber}"/>
+                    <GridViewColumn Width="Auto" Header="Email" DisplayMemberBinding ="{Binding Email}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Close" Command="{Binding Close}" HorizontalAlignment="Left" Margin="684,378,0,0" VerticalAlignment="Top" Height="34" Width="100" FontSize="14" FontFamily="Bahnschrift"/>
+        <TextBox HorizontalAlignment="Left" Margin="62,333,0,0" TextWrapping="Wrap" Text="{Binding Search}" VerticalAlignment="Top" Width="625"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,334,0,0" TextWrapping="Wrap" Text="Search:" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="14" RenderTransformOrigin="0.055,0.431"/>
+        <Button Content="Find" Command="{Binding Find}" HorizontalAlignment="Left" Margin="695,333,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="14" Width="40"/>
+        <Button Content="Clear" Command="{Binding Clear}" HorizontalAlignment="Left" Margin="743,333,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="14" Width="40"/>
+        <TextBlock HorizontalAlignment="Center" TextAlignment="Center" Margin="0,359,0,0" TextWrapping="Wrap" Text="{Binding ErrorText}" Visibility="{Binding Visible}" VerticalAlignment="Top" Width="790" Foreground="#FFC80000" FontFamily="Bahnschrift" FontSize="14"/>
+    </Grid>
+</Window>

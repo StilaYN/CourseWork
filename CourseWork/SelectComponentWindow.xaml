@@ -1,0 +1,33 @@
+﻿<Window x:Class="CourseWork.SelectComponentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork"
+        xmlns:modelview="clr-namespace:CourseWork.ViewModel"
+        d:DataContext="{d:DesignInstance Type=modelview:SelectComponentVM}"
+        mc:Ignorable="d"
+        Title="StorageWindow" Height="320" Width="460">
+    <Grid>
+        <Button Content="Select" Command="{Binding SelectComponent}" HorizontalAlignment="Left" Margin="18,239,0,0" VerticalAlignment="Top" Height="33" Width="408" FontFamily="Bahnschrift" FontSize="14"/>
+        <ListView ItemsSource="{Binding Storage}" SelectedItem="{Binding SelectedItem}" Margin="10,0,10,116" FontSize="14">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="Auto" Header="Article" DisplayMemberBinding ="{Binding Component.Article}"/>
+                    <GridViewColumn Width="Auto" Header="Name" DisplayMemberBinding ="{Binding Component.Name}"/>
+                    <GridViewColumn Width="Auto" Header="Technic type" DisplayMemberBinding ="{Binding Component.TechnicType}"/>
+                    <GridViewColumn Width="Auto" Header="Component type" DisplayMemberBinding ="{Binding Component.ComponentType}"/>
+                    <GridViewColumn Width="Auto" Header="Price" DisplayMemberBinding ="{Binding Component.Price}"/>
+                    <GridViewColumn Width="Auto" Header="Number" DisplayMemberBinding ="{Binding ComponentNumber}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox HorizontalAlignment="Left" Margin="64,185,0,0" TextWrapping="Wrap" Text="{Binding Search}" VerticalAlignment="Top" Width="273" FontFamily="Bahnschrift" FontSize="14"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="12,187,0,0" TextWrapping="Wrap" Text="Search:" VerticalAlignment="Top" FontSize="14" FontFamily="Bahnschrift"/>
+        <TextBlock TextAlignment="Center" HorizontalAlignment="Left" Margin="18,215,0,0" TextWrapping="Wrap" Text="{Binding ErrorText}" Visibility="{Binding Visible}" VerticalAlignment="Top" Width="408" Foreground="#FFC80000" FontFamily="Bahnschrift" FontSize="14"/>
+        <Button Content="Find" Command="{Binding Find}" HorizontalAlignment="Left" Margin="342,185,0,0" VerticalAlignment="Top" Height="19" FontFamily="Bahnschrift" FontSize="14" Width="40"/>
+        <Button Content="Clear" Command="{Binding Clear}" HorizontalAlignment="Left" Margin="386,185,0,0" VerticalAlignment="Top" Height="19" FontFamily="Bahnschrift" FontSize="14" Width="40"/>
+
+
+    </Grid>
+</Window>
